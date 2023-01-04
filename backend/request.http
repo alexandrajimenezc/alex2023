@@ -1,0 +1,78 @@
+
+###
+GET http://localhost:4000/categories
+###
+POST http://localhost:4000/categories
+content-type: application/json
+
+{
+  "name": "ropa"
+  
+}
+
+###
+
+http://localhost:4000/products
+###
+http://localhost:4000/products?limit=3&offset=0&maxPrice=50&minPrice=25
+
+###
+http://localhost:4000/products?limit=100&offset=0
+
+###
+http://localhost:4000/products?page=1&limit=10&keyword=zapatos65
+###
+http://localhost:4000/products?page=2
+###
+http://localhost:4000/products?keyword=zapatos65
+###
+http://localhost:4000/products/17
+###
+http://localhost:4000/products/search-name/zapatos65
+# http://localhost:4000/products/searchname/?name=zapatos65
+####
+POST http://localhost:4000/products
+content-type: application/json
+
+{
+  "name": "pantalon 4",
+  "description": "verde",
+  "price": 50,
+  "stock": 44,
+  "image": "https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg?w=740&t=st=1666715875~exp=1666716475~hmac=56f35164ebe60b54e78f61beebffc9efd5274ec9def23b3538b697aaae9fdf2a",
+  "brand": 1,
+  "categories": [
+    1,2
+  ]
+}
+###
+PUT http://localhost:4000/products/9
+content-type: application/json
+
+{
+
+  "description": "verdes editado",
+  "price": 500,
+  "stock": 44,
+  "image": "https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg?w=740&t=st=1666715875~exp=1666716475~hmac=56f35164ebe60b54e78f61beebffc9efd5274ec9def23b3538b697aaae9fdf2a",
+  "brand": 2,
+  "categories": [
+    "2"
+  ]
+}
+
+###
+DELETE http://localhost:4000/products/9
+
+###
+POST http://localhost:4000/brands
+content-type: application/json
+
+{
+  "name": "nike",
+  "image": "https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg?w=740&t=st=1666715875~exp=1666716475~hmac=56f35164ebe60b54e78f61beebffc9efd5274ec9def23b3538b697aaae9fdf2a"
+
+}
+
+####
+GET  http://localhost:4000/products/24

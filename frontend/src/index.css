@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Condensed&display=swap');
+:root {
+  --gray-light: #dedddd;
+  --gray-medium: #979696;
+  --gray-dark: #434345;
+  --blue-light: #5ca7dc;
+  --blue-dark: #1f3c7a;
+  --orange-light: #f8ad44;
+  --orange-medium: #f07e29;
+  --orange-dark: #ea5432;
+  --background-header: #94bfbeff;
+  --background-body: #acf7c1ff;
+  --font-all-titles: IBMPlexSerif-LightItalic;
+  --fonts-all-text: Rubik-Light;
+  --font-slider-title: BlueRiver;
+  --font-slider-text: Galvji;
+  --error: red;
+  -tyrian-purple: #5c0029ff;
+  --text:#857c8dff;
+--old-mauve: #61304bff;
+--rhythm: #857c8dff;
+--opal: #94bfbeff;
+--celadon: #acf7c1ff;
+--btn-primary:rgb(101, 202, 169);
+--btn-primary-hover:rgba(101, 202, 169,0.9);
+--btn-warning-hover:rgba(244, 143, 99,0.9);
+--btn-warning:rgb(244, 143, 99);
+--btn-shop:rgb(237, 144, 209);
+}
+body {
+ margin: 0;
+background-color: var(--background-body);
+
+font-family:  monospace;
+}
+.btn{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  margin: 1em 0.5em;
+  font-size: small;
+}
+.btn:active{
+  padding: 10px 8px; 
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: var(--btn-primary-hover) 
+}
+input {
+  padding: 6px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.btn__primary {
+  background-color: var(--btn-primary);
+  color: #fff;
+}
+.btn__shop {
+  background-color: var(--btn-shop);
+  color: #fff;
+}
+.btn__warning {
+  background-color: var(--btn-warning);
+  color: #fff;
+}
+.btn__warning:hover {
+  background-color: var(--btn-warning-hover);
+  color: #fff;
+}
+
+.btn__pagination {
+  background-color: var(--btn-warning);
+  color: #fff;
+  font-size: 1.2em;
+}
+.btn__pagination:hover {
+  background-color: var(--btn-warning-hover);
+  color: #fff;
+}
+.pagination{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

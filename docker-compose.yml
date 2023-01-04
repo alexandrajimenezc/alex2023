@@ -1,0 +1,77 @@
+version: "3.7"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: frontend
+    restart: always
+    env_file: .env
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    volumes:
+      - ./frontend:/usr/src
+    networks:
+      - alex-network
+    command: "npm start"
+
+
+  backend:
+    networks:
+      - alex-network
+    container_name: alex-api
+    build: 
+      context: backend
+    volumes:
+      - ./backend:/svr/src
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    environment:
+      - development=true
+    depends_on:
+      - mysql
+      
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_DATABASE="${MYSQL_DATABASE}"
+      - MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
+    ports:
+       - "${DB_PORT}:${DB_PORT}"
+    volumes:
+      - ./database/mysql_data:/var/lib/database/mysql
+    networks:
+      - alex-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
+      - PMA_HOST=mysql
+    ports:
+      - '8080:80'
+    depends_on:
+      - mysql
+    networks:
+      - alex-network
+  
+  
+
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=123456
+  #     - PMA_HOST=mysql
+  #   ports:
+  #     - '8080:80'
+  #   depends_on:
+  #     - mysql
+  #   networks:
+      # - alex-network
+
+networks:
+  alex-network:
+    driver: bridge
+ 
+
+ 

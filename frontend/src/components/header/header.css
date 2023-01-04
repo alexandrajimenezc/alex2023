@@ -1,0 +1,123 @@
+.header__container {
+    background-color: var(--background-header);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+
+}
+
+.header__logo {
+    width: 180px;
+    height: 60px;
+    margin-left: -9em;
+    margin-top: 0.4em;
+}
+
+.header__nav--menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.header__nav--item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 50px;
+    text-transform: uppercase;
+    width: max-content;
+
+}
+
+.header__nav--item>a {
+    color:var(--text);
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    text-decoration: none;
+    width: max-content;
+
+}
+
+.header__nav--item>a:hover {
+    font-size: 0.768em;
+    transition: 0.5s;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+
+
+}
+
+.icon-menu {
+    color: var(--blue-dark);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+.header__nav{
+    height: 100%;  
+}
+
+@media (max-width:768px) {
+
+    .header__nav--menu {
+       
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: var(--blue-dark);
+        position: fixed;
+        top: 70px;
+        width: 100%;
+        padding: 20px 0;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .header__nav--item {
+        line-height: 90px;
+
+
+    }
+
+    .header__nav--item>a {
+        color: var(--gray-light);
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .icon-menu {
+        display:block;
+    }
+    .header__logo {
+        margin-left:unset;
+    
+    }
+}
+
+
+@media (max-width:1388px) {
+    .header__logo {
+        margin-left:-1em;
+    
+    }
+}

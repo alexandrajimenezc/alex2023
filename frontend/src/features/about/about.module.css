@@ -1,0 +1,109 @@
+.about__container {
+    padding: 90px 0 0;
+    margin: 0 5.2em;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.4em;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.text__container {
+ 
+    margin-top: 5em;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.span{
+    color:rgb(145, 93, 136);
+
+    font-size: 1.1em;
+}
+
+.text {
+    color: rgb(110, 82, 105);
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.7em;
+    border-right: 4px solid;
+    width: 72ch;
+    text-align: center;
+    animation: typing 5.6s steps(67),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+p:nth-child(1) {
+    width: 80%;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+
+}
+
+.tech {
+
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    background-color: var(--opal);
+    border-radius: 20px;
+    height: 90px;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 190px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    text-transform: capitalize;
+
+}
+.openTech{
+
+}
+.noData{
+display: none;
+}
+.showData{
+    display: block;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.tech:hover {
+    transition: .5s ease;
+    cursor: pointer;
+    transform: rotate(20deg);
+    background-color: var(--btn-warning-hover);
+}
+
+
+.text__cool {
+    font-family: 'Press Start 2P', cursive;
+}
